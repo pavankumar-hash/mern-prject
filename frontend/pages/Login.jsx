@@ -21,6 +21,7 @@ const Login = () => {
       setMsg(response.data.message || "Login successful");
       // console.log(response.data);
       localStorage.setItem("token", response.data.token); // Store token for future use
+      localStorage.setItem("userId", response.data.user.id); // Store userId for future use
       setMsg("Login successful!");
       setTimeout(() => {
         navigate("/"); // Redirect to home page after successful login

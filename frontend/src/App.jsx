@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 import "./App.css";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -8,7 +8,7 @@ import AddProduct from "./admin/AddProduct";
 import ProductList from "./admin/ProductList";
 import EditProduct from "./admin/EditProduct";
 import Navbar from "../components/Navbar";
-
+import Cart from "../pages/Cart";
 function Layout() {
   return (<>
     <Navbar />
@@ -27,6 +27,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "login", element: <Login /> },
       { path: "signup", element: <Signup /> },
+      { path: "/cart", element: <Cart />, },
       { path: "product/:id", element: <ProductDetails /> },
 
       { path: "/admin/products", element: <ProductList /> },
